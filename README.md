@@ -5,7 +5,7 @@
 ps. Be careful with your access token, choose `read` permission only.
 2. fire!!
 ```bash
-$ node try.js
+$ node try.js microsoft vscode
 ```
 
 ## Check output

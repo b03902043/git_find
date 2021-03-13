@@ -4,6 +4,8 @@ const path = require('path');
 
 const myToken = fs.readFileSync(".token"); // https://github.com/settings/tokens, only need read permission
 const output = "collect";
+const myArgs = process.argv.slice(2);
+console.info(myArgs);
 
 // They have the same output
 async function zz(user, repo) {
@@ -18,4 +20,4 @@ async function zz(user, repo) {
     }
     fs.writeFileSync(path.join(output, user, repo + ".txt"), filesArray.join('\n'));
 }
-zz("microsoft", "vscode");
+zz(myArgs[0], myArgs[1]);
